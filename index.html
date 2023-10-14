@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(solar212.jfif);">
+
+    <section class="main">
+
+        <div>
+            <marquee style="font-size: 40px; font-weight: 800;" behavior="" direction="right">  Evaluation Table</marquee>
+        </div>
+
+        
+
+    </section> <br><br><br><br>
+    
+    <div class="input_holder">
+        <input class="inputer" type="number" placeholder=" first value" id="first">
+        <input class="inputer" type="number" placeholder="second value" id="second">
+        
+    </div>
+        <br><br>
+    <div style="text-align: center;">
+        <button class="butner" onclick="cal()">Multiplication ❌</button>
+        <button class="butner" onclick="addition()">Addition ➕</button>
+        <button class="butner" onclick="subtration()">Subtration ➖</button>
+        <button class="butner" onclick="division()">Division ➗</button>
+    </div>
+
+    <center>
+        <table id="myTable">
+            
+    
+            
+        </table>
+
+        
+        
+    </center>
+    <div id="tender"></div>
+
+    <script>
+        function cal(){
+            myTable.innerHTML = ""
+            var one = first.value
+            var two = second.value
+            console.log(one,two)
+            for(i=1; i<=Number(first.value); i++){
+                calculate =`<tr style = "border:1px solid black">`
+                for(j=1; j<=Number(second.value); j++){
+                    calculate +=`<td style="border:1px solid black">${i} * ${j} = ${i * j}</td>`
+                    console.log(`${i} * ${j} = ${i * j}` )
+                   
+                }
+                calculate += `</tr>`
+                myTable.innerHTML+= calculate 
+            }
+        }
+
+        function addition(){
+            myTable.innerHTML = ""
+            var one = first.value
+            var two = second.value
+            console.log(one,two)
+            for(i=1; i<=Number(first.value); i++){
+                add =`<tr style = "border:1px solid black">`
+                for(j=1; j<=Number(second.value); j++){
+                    add +=`<td style="border:1px solid black">${i} + ${j} = ${i + j}</td>`
+                    console.log(`${i} + ${j} = ${i + j}` )
+                   
+                }
+                add += `</tr>`
+                myTable.innerHTML+= add 
+            }
+        }
+
+        function subtration(){
+            myTable.innerHTML = ""
+            var one = first.value
+            var two = second.value
+            console.log(one,two)
+            for(i=1; i<=Number(first.value); i++){
+                subtrat =`<tr style = "border:1px solid black">`
+                for(j=1; j<=Number(second.value); j++){
+                    subtrat +=`<td style="border:1px solid black">${i} - ${j} = ${i- j}</td>`
+                    console.log(`${i} - ${j} = ${i - j}` )
+                   
+                }
+                subtrat += `</tr>`
+                myTable.innerHTML+= subtrat
+            }
+        }
+
+        function division(){
+            myTable.innerHTML = ""
+            var one = first.value
+            var two = second.value
+            console.log(one,two)
+            for(i=1; i<=Number(first.value); i++){
+                divi =`<tr style = "border:1px solid black">`
+                for(j=1; j<=Number(second.value); j++){
+                    var ans = (i/j)
+                    divi +=`<td style="border:1px solid black">${i} / ${j} = ${ans.toFixed(2)}</td>`
+                    console.log(`${i} / ${j} = ${ans.toFixed(2)}` )
+                   
+                }
+                divi += `</tr>`
+                myTable.innerHTML+= divi
+            }
+        }
+
+
+        
+    </script>
+</body>
+</html>

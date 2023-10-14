@@ -1,0 +1,28 @@
+.input_holder{
+    text-align: center;
+}
+.inputer{
+    width: 12%;
+    height: 5vh;
+    border-radius: 5px;
+    border: 2px solid brown;
+}
+#myTable{
+    background-color: gold;
+}
+tr:hover{
+    background-color: rgb(255, 72, 0);
+}
+.butner{
+    height: 7vh;
+    width: 10%;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.butner:hover{
+    background-color: rgb(104,111,121);
+}
+.main{
+   
+    
+}
